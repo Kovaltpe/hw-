@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+<section class="ex-1">
+    <div class="box">
+
+    </div>
+</section>
+<section class="ex-2">
+    <section class="gallery">
+    <div class="container">
+<div class="box-1">
+    <h2>Gallery</h2>
+    <img src="https://tse1.mm.bing.net/th/id/OIP.--iNuz4yLO-MW5q5FpZ_SwHaEK?r=0&pid=Api&h=220&P=0" alt="Image 1">
+</div>
+
+    <div class="box-1">
+        <h2>Gallery</h2>
+        <img src="https://tse1.mm.bing.net/th/id/OIP.--iNuz4yLO-MW5q5FpZ_SwHaEK?r=0&pid=Api&h=220&P=0" alt="Image 2">
+    </div>
+    <div class="box-1">
+        <h2>Gallery</h2>
+        <img src="https://tse1.mm.bing.net/th/id/OIP.--iNuz4yLO-MW5q5FpZ_SwHaEK?r=0&pid=Api&h=220&P=0" alt="Image 3">
+    </div>
+        </div>
+    </section>
+</section>
+<section class="ex-3">
+    <div class="portfolio">
+        <h2>Portfolio</h2>
+        <p>This is a simple portfolio section.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+</section>
+<section class="ex-4">
+    <article class="product-card">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.--iNuz4yLO-MW5q5FpZ_SwHaEK?r=0&pid=Api&h=220&P=0" alt="Навушники">
+        <h2>Бездротові навушники</h2>
+        <p class="product-price">1 499 грн</p>
+        <button class="modal-trigger" type="button">Переглянути</button>
+   
+    <div class="modal-window" id="quick-view-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button class="modal-close" type="button" aria-label="Закрити вікно">&times;</button>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREgPOMDLZVFp1DeK2jsD2-71D1QWdZail3-sx6sGwW9w&s=10" alt="Навушники">
+            <div class="product-details">
+                <h2 id="modal-title">Бездротові навушники</h2>
+                <p class="product-price">1 499 грн</p>
+                <p>Зручні бездротові навушники з чистим звучанням для музики та дзвінків.</p>
+                <button class="add-to-cart" type="button">Додати в кошик</button>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        const modal = document.querySelector("#quick-view-modal");
+
+        document.querySelector(".modal-trigger").addEventListener("click", () => {
+            modal.classList.add("is-open");
+        });
+
+        modal.querySelector(".modal-close").addEventListener("click", () => {
+            modal.classList.remove("is-open");
+        });
+
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.classList.remove("is-open");
+            }
+        });
+    </script>
+</body>
+</html>
